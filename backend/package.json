@@ -1,9 +1,9 @@
 {
-  "name": "growtech-fullstack-backend",
+  "name": "growthtech-backend-challenge",
   "version": "1.0.0",
-  "description": "Full stack challenge for GrowTech company.",
+  "description": "Full stack challenge for GrowthTech company.",
   "main": "index.js",
-  "repository": "https://github.com/danielcti/growtech-fullstack-challenge",
+  "repository": "https://github.com/danielcti/growthtech-fullstack-challenge",
   "author": "Daniel Cavalcanti",
   "license": "MIT",
   "scripts": {

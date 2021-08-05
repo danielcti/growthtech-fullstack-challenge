@@ -6,6 +6,9 @@
   "repository": "https://github.com/danielcti/growthtech-fullstack-challenge",
   "author": "Daniel Cavalcanti",
   "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "tsc --project ./",

@@ -1,9 +1,13 @@
 import React from "react";
-
+import Header from "../../components/Header";
 // import { Container } from './styles';
 
 function UsersList() {
-  return <div />;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default UsersList;

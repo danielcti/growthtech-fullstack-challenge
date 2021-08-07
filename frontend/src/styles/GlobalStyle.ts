@@ -44,8 +44,9 @@ export default createGlobalStyle`
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
-    body {
+    body, #root {
         line-height: 1;
+        min-height: 100vh;
     }
     ol, ul {
         list-style: none;
@@ -61,5 +62,9 @@ export default createGlobalStyle`
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    body a {
+        color: inherit;
+        text-decoration: inherit;
     }
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background: #ea9c02;
+  background: ${(props) => props.theme.colors.secondary};
   padding: 1rem 2rem;
 `;
 
@@ -24,7 +24,7 @@ export const Navbar = styled.nav`
     font-size: 1.2rem;
 
     &.active {
-      color: #009fe3;
+      color: ${(props) => props.theme.colors.main};
       font-weight: bold;
     }
   }

@@ -19,21 +19,17 @@ export const ContentWrapper = styled.div`
   margin: auto;
 `;
 
-export const ContentHeader = styled.header`
+export const PostsContainer = styled.div`
+  margin-top: 4rem;
   color: ${(props) => props.theme.colors.dark};
 
   h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 400;
-  }
 `;
 
-export const ContentList = styled.ul`
+export const PostList = styled.ul`
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;

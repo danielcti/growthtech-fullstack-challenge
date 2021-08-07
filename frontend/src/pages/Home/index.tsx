@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo-growthtech.svg";
 import { GITHUB_URL, LINKEDIN_URL } from "../../utils/infos";
@@ -16,13 +16,12 @@ import {
 } from "./styles";
 
 function Home(props: any) {
-  console.log(props);
   return (
     <Container>
       <LeftContainer>
-        <NavLink to="/">
+        <Link to="/">
           <img src={logo} />
-        </NavLink>
+        </Link>
         <PersonalInfoContainer>
           <h2>Olá,</h2>
           <h1>Eu sou Daniel Cavalcanti</h1>
@@ -35,8 +34,8 @@ function Home(props: any) {
           </p>
         </PersonalInfoContainer>
         <Links>
-          <NavLink to="companies">Listagem de empresas</NavLink>
-          <NavLink to="users">Listagem de usuários</NavLink>
+          <Link to="/companies">Listagem de empresas</Link>
+          <Link to="/users">Listagem de usuários</Link>
         </Links>
         <SocialNetworks>
           <a href={GITHUB_URL}>
@@ -49,8 +48,8 @@ function Home(props: any) {
       </LeftContainer>
       <RightContainer>
         <nav>
-          <NavLink to="companies">empresas</NavLink>
-          <NavLink to="users">usuários</NavLink>
+          <Link to="/companies">empresas</Link>
+          <Link to="/users">usuários</Link>
         </nav>
         <div>
           <img src="https://avatars.githubusercontent.com/u/31549323?v=4" />

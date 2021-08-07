@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { Container, Wrapper, Navbar } from "./styles";
 import logo from "../../assets/logo-growthtech.svg";
@@ -9,15 +9,15 @@ function Header() {
     <Container>
       <Wrapper>
         <div>
-          <NavLink to="/">
+          <Link to="/">
             <img src={logo} />
-          </NavLink>
+          </Link>
         </div>
         <Navbar>
-          <NavLink to="companies" activeClassName="active">
+          <NavLink to="/companies" activeClassName="active">
             empresas
           </NavLink>
-          <NavLink to="users" activeClassName="active">
+          <NavLink to="/users" activeClassName="active">
             usuários
           </NavLink>
         </Navbar>

@@ -11,6 +11,7 @@ routes.get("/users/:id", UsersController.show);
 routes.get("/users/:id/posts", UserPostsController.index);
 
 routes.get("/companies", CompaniesController.index);
+routes.get("/companies/:slug", CompaniesController.show);
 
 routes.get("/posts", PostsController.index);
 routes.get("/posts/:id", PostsController.show);

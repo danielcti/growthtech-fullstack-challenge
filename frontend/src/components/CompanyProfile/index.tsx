@@ -17,7 +17,7 @@ function CompanyProfile({ data }: CompanyProfileProps) {
         <h2>{data.catchPhrase}</h2>
         <div>
           <FaUserFriends size={30} />
-          <h2>Total of employees: {data.employees}</h2>
+          <h2>Total de funcionários: {data.employees}</h2>
         </div>
       </InfoContainer>
       <AvatarContainer>

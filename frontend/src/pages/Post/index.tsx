@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import api from "../../services/api";
 import { User } from "../../utils/types";
 import { FaReadme } from "react-icons/fa";
+import { getLectureTime, getRandomDate } from "../../utils/auxiliar-methods";
 
 import {
   Wrapper,
@@ -55,15 +56,15 @@ function Post() {
       <Header />
       <Container>
         <ContentWrapper>
-          <h2>Post details</h2>
+          <h2>Detalhes do Post</h2>
           <PostHeader>
             <h1>{post?.title}</h1>
             <h3>
-              28 de Janeiro, 2021 <span>por</span> {userData?.name}
+              {getRandomDate()} <span>por</span> {userData?.name}
             </h3>
             <h4>
               <FaReadme />
-              2min de leitura
+              {getLectureTime(post?.body || "")}
             </h4>
           </PostHeader>
           <PostContent>

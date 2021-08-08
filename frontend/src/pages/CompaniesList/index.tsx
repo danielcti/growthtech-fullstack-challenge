@@ -42,7 +42,6 @@ function CompaniesList() {
                 color="#009fe3"
                 height={100}
                 width={100}
-                timeout={3000}
               />
             ) : (
               companies.map((company) => (

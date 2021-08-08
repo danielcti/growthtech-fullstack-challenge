@@ -59,13 +59,7 @@ function User() {
       <Container>
         <ContentWrapper>
           {loading ? (
-            <Loader
-              type="TailSpin"
-              color="#009fe3"
-              height={100}
-              width={100}
-              timeout={3000}
-            />
+            <Loader type="TailSpin" color="#009fe3" height={100} width={100} />
           ) : (
             <>
               {userData && <UserProfile data={userData} />}

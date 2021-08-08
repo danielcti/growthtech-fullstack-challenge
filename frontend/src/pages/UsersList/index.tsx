@@ -42,7 +42,6 @@ function UsersList() {
                 color="#009fe3"
                 height={100}
                 width={100}
-                timeout={3000}
               />
             ) : (
               users.map((user) => <Card key={user.name} data={user} />)

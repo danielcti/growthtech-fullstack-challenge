@@ -75,7 +75,7 @@ export const Links = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${(props) => props.theme.colors.light};
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: background 0.3s;
@@ -135,7 +135,7 @@ export const RightContainer = styled.div`
     a {
       text-decoration: none;
       margin: 0 20px;
-      color: ${(props) => props.theme.colors.light};
+      color: #fff;
       font-size: 1.2rem;
 
       &:hover {

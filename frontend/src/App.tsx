@@ -1,19 +1,9 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./styles/GlobalStyle";
-import defaultTheme from "./styles/theme";
-
 import Routes from "./routes";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
-  return (
-    <>
-      <ThemeProvider theme={defaultTheme}>
-        <GlobalStyle />
-        <Routes />
-      </ThemeProvider>
-    </>
-  );
+  return <Routes />;
 }
 
 export default App;

@@ -37,4 +37,5 @@ export const ContentList = styled.ul`
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;

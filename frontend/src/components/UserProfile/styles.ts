@@ -39,4 +39,8 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const AvatarContainer = styled.div``;
+export const AvatarContainer = styled.div`
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;

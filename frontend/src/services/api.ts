@@ -6,7 +6,7 @@ const url =
     : "https://growthtech-backend-challenge.herokuapp.com";
 
 const api = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL: url,
 });
 
 export default api;

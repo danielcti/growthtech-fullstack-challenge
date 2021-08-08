@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Loader from "react-loader-spinner";
 import Header from "../../components/Header";
 import Card from "../../components/UserCard";
 import {
@@ -14,11 +14,14 @@ import { User } from "../../utils/types";
 
 function UsersList() {
   const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true);
       const { data } = await api.get("users");
       setUsers(data);
+      setLoading(false);
     }
     fetchData();
   }, []);
@@ -33,9 +36,17 @@ function UsersList() {
             <h3>Lista de todos os usuários</h3>
           </ContentHeader>
           <ContentList>
-            {users.map((user) => (
-              <Card key={user.name} data={user} />
-            ))}
+            {loading ? (
+              <Loader
+                type="TailSpin"
+                color="#009fe3"
+                height={100}
+                width={100}
+                timeout={3000}
+              />
+            ) : (
+              users.map((user) => <Card key={user.name} data={user} />)
+            )}
           </ContentList>
         </ContentWrapper>
       </Container>

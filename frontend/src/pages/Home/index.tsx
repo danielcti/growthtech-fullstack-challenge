@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo-growthtech.svg";
 import { GITHUB_URL, LINKEDIN_URL } from "../../utils/infos";
-import defaultTheme from "../../styles/theme";
 
 import {
   Container,
@@ -20,7 +19,7 @@ function Home(props: any) {
     <Container>
       <LeftContainer>
         <Link to="/">
-          <img src={logo} />
+          <img src={logo} alt="Logo da Growth Tech" />
         </Link>
         <PersonalInfoContainer>
           <h2>Olá,</h2>
@@ -39,10 +38,10 @@ function Home(props: any) {
         </Links>
         <SocialNetworks>
           <a href={GITHUB_URL}>
-            <FaGithub color={defaultTheme.colors.dark} size={40} />
+            <FaGithub color="#223a45" size={40} />
           </a>
           <a href={LINKEDIN_URL}>
-            <FaLinkedin color={defaultTheme.colors.dark} size={40} />
+            <FaLinkedin color="#223a45" size={40} />
           </a>
         </SocialNetworks>
       </LeftContainer>
@@ -52,7 +51,10 @@ function Home(props: any) {
           <Link to="/users">usuários</Link>
         </nav>
         <div>
-          <img src="https://avatars.githubusercontent.com/u/31549323?v=4" />
+          <img
+            src="https://avatars.githubusercontent.com/u/31549323?v=4"
+            alt="Imagem de perfil de Daniel Cavalcanti"
+          />
         </div>
       </RightContainer>
     </Container>

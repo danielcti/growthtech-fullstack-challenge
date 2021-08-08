@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInfoCircle, FaEnvelope, FaBriefcase } from "react-icons/fa";
+import { FaEnvelope, FaBriefcase } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Avatar from "../Avatar";
 

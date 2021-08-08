@@ -16,6 +16,12 @@ export const Wrapper = styled.li`
   &:nth-child(even) {
     margin-right: 0;
   }
+
+  @media (max-width: 1180px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 `;
 
 export const Container = styled.div`

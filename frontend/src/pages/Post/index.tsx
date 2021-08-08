@@ -16,15 +16,15 @@ import {
 } from "./styles";
 import Comment from "../../components/Comment";
 
-interface Post {
+interface PostType {
   userId: number;
   id: number;
   title: string;
   body: string;
-  comments: Comment[];
+  comments: CommentType[];
 }
 
-interface Comment {
+interface CommentType {
   postId: number;
   id: number;
   name: string;
@@ -37,20 +37,20 @@ interface Params {
 }
 
 function Post() {
-  const [post, setPost] = useState<Post>();
+  const [post, setPost] = useState<PostType>();
   const [userData, setUserData] = useState<User>();
   const params = useParams() as Params;
 
   useEffect(() => {
     async function fetchData() {
-      const { data: post } = await api.get<Post>(`posts/${params.id}`);
+      const { data: post } = await api.get<PostType>(`posts/${params.id}`);
       const { data: user } = await api.get(`users/${post.userId}`);
 
       setUserData(user);
       setPost(post);
     }
     fetchData();
-  }, []);
+  }, [params.id]);
   return (
     <Wrapper>
       <Header />
@@ -68,13 +68,13 @@ function Post() {
             </h4>
           </PostHeader>
           <PostContent>
-            <img src="https://picsum.photos/1200/600" />
+            <img src="https://picsum.photos/1200/600" alt="Imagem aleatória" />
             <p>{post?.body}</p>
           </PostContent>
           <h2>Comentários</h2>
           <CommentsList>
             {post?.comments.map((comment) => (
-              <Comment data={comment} />
+              <Comment key={comment.id} data={comment} />
             ))}
           </CommentsList>
         </ContentWrapper>

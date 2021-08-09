@@ -3,6 +3,18 @@ import styled from "styled-components";
 export const Container = styled.header`
   background: ${(props) => props.theme.colors.secondary};
   padding: 1rem 2rem;
+
+  @media (max-width: 1000px) {
+    padding: 1rem 1rem;
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  @media (max-width: 700px) {
+    img {
+      width: 100px;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -26,6 +38,10 @@ export const Navbar = styled.nav`
     &.active {
       color: ${(props) => props.theme.colors.main};
       font-weight: bold;
+    }
+
+    @media (max-width: 1000px) {
+      margin: 0 0.5rem;
     }
   }
 `;

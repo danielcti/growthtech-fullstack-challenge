@@ -12,6 +12,10 @@ export const Container = styled.div`
     width: 9rem;
     padding: 1.1rem;
   }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const Sun = styled(IoMdSunny)`
